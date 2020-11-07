@@ -16,11 +16,9 @@ import (
 // Unlike a Buffer, a Reader is read-only and supports seeking.
 // The zero value for Reader operates like a Reader of an empty slice.
 type Reader struct {
-	s []byte
-	i int64 // current reading index
-
-	// 为了 unRead 类操作
-	prevRune int // index of previous rune; or < 0
+	s        []byte
+	i        int64 // current reading index
+	prevRune int   // index of previous rune; or < 0
 }
 
 // Len returns the number of bytes of the unread portion of the

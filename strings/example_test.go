@@ -36,8 +36,6 @@ func ExampleCompare() {
 func ExampleContains() {
 	fmt.Println(strings.Contains("seafood", "foo"))
 	fmt.Println(strings.Contains("seafood", "bar"))
-
-	// 空串为 true
 	fmt.Println(strings.Contains("seafood", ""))
 	fmt.Println(strings.Contains("", ""))
 	// Output:
@@ -48,7 +46,6 @@ func ExampleContains() {
 }
 
 func ExampleContainsAny() {
-	// 任意一个 utf8 字符
 	fmt.Println(strings.ContainsAny("team", "i"))
 	fmt.Println(strings.ContainsAny("fail", "ui"))
 	fmt.Println(strings.ContainsAny("ure", "ui"))
@@ -76,8 +73,6 @@ func ExampleContainsRune() {
 
 func ExampleCount() {
 	fmt.Println(strings.Count("cheese", "e"))
-
-	// utf8 字符数 + 1
 	fmt.Println(strings.Count("five", "")) // before & after each rune
 	// Output:
 	// 3
@@ -85,7 +80,6 @@ func ExampleCount() {
 }
 
 func ExampleEqualFold() {
-	// 不区分大小写
 	fmt.Println(strings.EqualFold("Go", "go"))
 	// Output: true
 }
@@ -113,7 +107,6 @@ func ExampleHasSuffix() {
 }
 
 func ExampleIndex() {
-	// 从 0 开始到出现的位置
 	fmt.Println(strings.Index("chicken", "ken"))
 	fmt.Println(strings.Index("chicken", "dmr"))
 	// Output:

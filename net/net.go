@@ -109,7 +109,6 @@ type Addr interface {
 // Conn is a generic stream-oriented network connection.
 //
 // Multiple goroutines may invoke methods on a Conn simultaneously.
-// 并发安全
 type Conn interface {
 	// Read reads data from the connection.
 	// Read can be made to time out and return an error after a fixed
@@ -306,7 +305,6 @@ func (c *conn) File() (f *os.File, err error) {
 // PacketConn is a generic packet-oriented network connection.
 //
 // Multiple goroutines may invoke methods on a PacketConn simultaneously.
-// 并发安全
 type PacketConn interface {
 	// ReadFrom reads a packet from the connection,
 	// copying the payload into p. It returns the number of
@@ -323,7 +321,6 @@ type PacketConn interface {
 	// WriteTo can be made to time out and return an Error after a
 	// fixed time limit; see SetDeadline and SetWriteDeadline.
 	// On packet-oriented connections, write timeouts are rare.
-	// 很少写入超时
 	WriteTo(p []byte, addr Addr) (n int, err error)
 
 	// Close closes the connection.
@@ -383,7 +380,6 @@ func listenerBacklog() int {
 // A Listener is a generic network listener for stream-oriented protocols.
 //
 // Multiple goroutines may invoke methods on a Listener simultaneously.
-// 并发安全
 type Listener interface {
 	// Accept waits for and returns the next connection to the listener.
 	Accept() (Conn, error)

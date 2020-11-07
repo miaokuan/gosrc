@@ -71,7 +71,7 @@ func ExampleReader() {
 		fmt.Println()
 	}
 	// Output:
-	// Contents of aREADME:
+	// Contents of README:
 	// This is the source code repository for the Go programming language.
 }
 

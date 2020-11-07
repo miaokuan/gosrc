@@ -114,11 +114,6 @@ func ipVersion(network string) byte {
 var DefaultResolver = &Resolver{}
 
 // A Resolver looks up names and numbers.
-type a struct {
-	Resolver
-	
-}
-
 //
 // A nil *Resolver is equivalent to a zero Resolver.
 type Resolver struct {

@@ -83,7 +83,7 @@ func (b *Builder) Grow(n int) {
 	}
 }
 
-// Write appends the contents of p to b's buffer, implements io.Writer interface.
+// Write appends the contents of p to b's buffer.
 // Write always returns len(p), nil.
 func (b *Builder) Write(p []byte) (int, error) {
 	b.copyCheck()
